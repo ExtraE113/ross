@@ -188,6 +188,7 @@ class _RespondState extends State<Respond> {
                     "Respond ",
                     style: TextStyle(
                       fontSize: 100,
+                      height: 1.6,
                       fontFamily: 'Bandakala',
                       color: Color(0xffF86624),
                     ),

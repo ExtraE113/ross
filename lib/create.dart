@@ -73,6 +73,7 @@ class _CreateState extends State<Create> {
                         fontSize: 32,
                         fontFamily: 'Bandakala',
                         color: Color(0xff22AAA1),
+                        height: 1.6
                       ),
                     ),
                   ),

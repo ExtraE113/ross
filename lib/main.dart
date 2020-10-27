@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:Ross/create.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:platform_detect/platform_detect.dart';
 
 void main() {
   Firebase.initializeApp();
@@ -22,11 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: browser.isChrome
-          ? MyHomePage()
-          : Center(
-              child: Text(
-                  "Chrome is the only supported browser at this time. Please use chrome to continue.")), //todo
+      home: MyHomePage()
     );
   }
 }
@@ -50,6 +45,7 @@ class MyHomePage extends StatelessWidget {
                   "Ross ",
                   style: TextStyle(
                     fontSize: 100,
+                    height: 1.6,
                     fontFamily: 'Bandakala',
                     color: Color(0xffF86624),
                   ),
