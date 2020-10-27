@@ -127,6 +127,7 @@ class _CreateState extends State<Create> {
                       ),
                       style: TextStyle(
                         fontSize: 25,
+                        height: 1.6,
                         fontFamily: "Bandakala",
                       ),
                     ),

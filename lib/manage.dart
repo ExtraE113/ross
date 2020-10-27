@@ -202,6 +202,7 @@ class _ResponsesState extends State<Responses> {
                       ),
                       style: TextStyle(
                         fontSize: 25,
+                        height: 1.6,
                         fontFamily: "Bandakala",
                       ),
                     ),
