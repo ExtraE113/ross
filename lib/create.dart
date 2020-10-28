@@ -31,7 +31,7 @@ class _CreateState extends State<Create> {
 
       // I was lazy, so from https://stackoverflow.com/questions/61919395/how-to-generate-random-string-in-dart
 
-      String roomID = Utils.generateRandomString(4);
+      String roomID = Utils.generateRandomString(6);
       await rooms
           .doc(roomID)
           .set({'question': question, "responses": {}, "show": false})

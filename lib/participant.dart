@@ -136,7 +136,7 @@ class _RespondState extends State<Respond> {
   Widget build(BuildContext context) {
     if (part_id == null) {
       setState(() {
-        part_id = Utils.generateRandomString(100);
+        part_id = Utils.generateRandomString(200);
       });
     }
     // Create a CollectionReference called users that references the firestore collection
