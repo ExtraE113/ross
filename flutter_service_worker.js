@@ -12,12 +12,10 @@ const RESOURCES = {
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/NOTICES": "3b9c3767e87b21da8ed0db3402ac07fb",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "355c5eed5a80c622a673d9be8075f7ed",
-"/": "355c5eed5a80c622a673d9be8075f7ed",
-"main.dart.js": "a08cf94990b93e93780f51a485807112",
+"favicon.ico": "e1507fea5c511b78201fae12a5114241",
+"index.html": "b3f6ac91d6be98e6856e379dc71c3a46",
+"/": "b3f6ac91d6be98e6856e379dc71c3a46",
+"main.dart.js": "a1fa13b4ba6c8fe1f8da3831716130a8",
 "manifest.json": "610939652dd1c734a2845157ed59db99",
 "version.json": "2451212e72a228e7449a526c2206806d"
 };
