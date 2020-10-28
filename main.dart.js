@@ -29502,7 +29502,7 @@ return O.rS(H.d([T.b9(T.jU(T.fq(H.d([L.bU("Start by entering your first question
 F.X8.prototype={
 $0:function(){var s=0,r=P.T(t.X),q,p=this,o,n
 var $async$$0=P.P(function(a,b){if(a===1)return P.Q(b,r)
-while(true)switch(s){case 0:o=B.a7s(4)
+while(true)switch(s){case 0:o=B.a7s(6)
 n=t.z
 s=3
 return P.a9(p.b.dq(0,o).nP(0,P.ae(["question",p.a.d,"responses",P.w(n,n),"show",!1],t.X,n)).bN(0,new F.X9(),t.H).kn(new F.Xa()),$async$$0)
@@ -29738,7 +29738,7 @@ q=O.mq(K.fx(n))
 p="rooms/"+o.a.c
 return O.rS(H.d([B.a7b(new V.ZQ(o),O.y2(q,q.giN().dq(0,p)).yh(),t.Eq)],t.Y),r,new U.le(s,null))}}
 V.ZP.prototype={
-$0:function(){this.a.e=B.a7s(100)},
+$0:function(){this.a.e=B.a7s(200)},
 $S:1}
 V.ZQ.prototype={
 $2:function(a,b){var s,r,q,p,o,n,m,l=null,k="question",j="Huruf Miranti",i=b.b
@@ -29797,7 +29797,7 @@ nF:function(a,b,c,d,e){var s=e.a,r=c.a,q=d.r1,p=c.b+(q.b-s)/2
 return new P.t(r,p,r+q.a,p+s)},
 rp:function(a,b,c,d){return this.nF(a,!1,b,c,d)}}
 B.Wd.prototype={
-$1:function(a){return"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890"[this.a.wG(62)]},
+$1:function(a){return"AEFGHKMNPQRWXYZ1234679"[this.a.wG(22)]},
 $S:347}
 T.fR.prototype={
 gO:function(a){return new T.UZ(this.a,0,0)},
