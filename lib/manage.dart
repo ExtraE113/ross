@@ -13,88 +13,92 @@ class Manage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFFD9CAB3),
       body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TopBar(id: id),
-            Padding(
-              padding: const EdgeInsets.all(32.0),
-              child: SizedBox(
-                width: 300,
-                height: 155,
-                child: Stack(children: [
-                  Text(
-                    "Share ",
-                    style: TextStyle(
-                      fontSize: 100,
-                      fontFamily: 'Bandakala',
-                      color: Color(0xffF86624),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      "Polling made easy",
+        child: FittedBox(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TopBar(id: id),
+              Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: SizedBox(
+                  width: 300,
+                  height: 155,
+                  child: Stack(children: [
+                    Text(
+                      "Share ",
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 100,
                         fontFamily: 'Bandakala',
-                        color: Color(0xff22AAA1),
+                        color: Color(0xffF86624),
                       ),
                     ),
-                  ),
-                ]),
-              ),
-            ),
-            SizedBox(
-              width: 700,
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      "Share this code with your respondents",
-                      style:
-                          TextStyle(fontSize: 50, fontFamily: "Huruf Miranti"),
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      "When you're ready, click Let's go! If anyone's running late they can join any time.",
-                      style:
-                          TextStyle(fontSize: 25, fontFamily: "Huruf Miranti"),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 40),
-                    TextField(
-                      textAlign: TextAlign.center,
-                      showCursor: false,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                      ),
-                      style: TextStyle(
-                          fontSize: 25, fontFamily: "Bazar", letterSpacing: 3),
-                      enabled: false,
-                      controller: TextEditingController()
-                        ..text = id.toUpperCase(),
-                    ),
-                    SizedBox(height: 100),
                     Align(
                       alignment: Alignment.bottomRight,
-                      child: MainActionButton(
-                        text: "LET'S GO!",
-                        onTap: () async {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return Responses(id: id);
-                          }));
-                        },
+                      child: Text(
+                        "Polling made easy",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontFamily: 'Bandakala',
+                          color: Color(0xff22AAA1),
+                        ),
                       ),
-                    )
-                  ],
+                    ),
+                  ]),
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                width: 700,
+                child: Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Share this code with your respondents",
+                        style:
+                            TextStyle(fontSize: 50, fontFamily: "Huruf Miranti"),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        "When you're ready, click Let's go! If anyone's running late they can join any time.",
+                        style:
+                            TextStyle(fontSize: 25, fontFamily: "Huruf Miranti"),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 40),
+                      TextField(
+                        textAlign: TextAlign.center,
+                        showCursor: false,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                        style: TextStyle(
+                            fontSize: 25, fontFamily: "Bazar", letterSpacing: 3),
+                        enabled: false,
+                        controller: TextEditingController()
+                          ..text = id.toUpperCase(),
+                      ),
+                      SizedBox(height: 100),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: MainActionButton(
+                          text: "LET'S GO!",
+                          onTap: () async {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) {
+                              return Responses(id: id);
+                            }));
+                          },
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 70)
+            ],
+          ),
         ),
       ),
     );
@@ -121,134 +125,138 @@ class _ResponsesState extends State<Responses> {
     return Scaffold(
       backgroundColor: Color(0xFFD9CAB3),
       body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TopBar(id: widget.id),
-            Padding(
-              padding: const EdgeInsets.all(32.0),
-              child: SizedBox(
-                width: 322,
-                height: 155,
-                child: Stack(children: [
-                  Text(
-                    "Watch ",
-                    style: TextStyle(
-                      fontSize: 100,
-                      fontFamily: 'Bandakala',
-                      color: Color(0xffF86624),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      "Polling made easy",
+        child: FittedBox(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TopBar(id: widget.id),
+              Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: SizedBox(
+                  width: 322,
+                  height: 155,
+                  child: Stack(children: [
+                    Text(
+                      "Watch ",
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 100,
                         fontFamily: 'Bandakala',
-                        color: Color(0xff22AAA1),
+                        color: Color(0xffF86624),
                       ),
                     ),
-                  ),
-                ]),
-              ),
-            ),
-            SizedBox(
-              width: 700,
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      "Watch your responses roll in",
-                      style:
-                          TextStyle(fontSize: 50, fontFamily: "Huruf Miranti"),
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      "When you're done with this question, type a new one in the box. Click \"Update\" and it'll magically change on all your respondents's screens instantly\n" +
-                          (!show
-                              ? "Click show to show your participants the data."
-                              : "Click hide to hide the data from your participants."),
-                      style:
-                          TextStyle(fontSize: 25, fontFamily: "Huruf Miranti"),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 20),
-                    OpinionBar(id: widget.id),
-                    SizedBox(height: 40),
-                    TextField(
-                      onChanged: (text) {
-                        setState(() {
-                          question = text;
-                        });
-                      },
-                      textAlign: TextAlign.center,
-                      cursorColor: Colors.grey,
-                      cursorWidth: 3,
-                      cursorRadius: Radius.circular(5),
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        hintText: 'How much do you love me?',
-                        hintStyle: TextStyle(
-                          fontSize: 25,
-                          fontFamily: "Bandakala",
-                        ),
-                        focusedBorder: const OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(color: Colors.black, width: 1),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        "Polling made easy",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontFamily: 'Bandakala',
+                          color: Color(0xff22AAA1),
                         ),
                       ),
-                      style: TextStyle(
-                        fontSize: 25,
-                        height: 1.6,
-                        fontFamily: "Bandakala",
-                      ),
                     ),
-                    SizedBox(height: 50),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        MainActionButton(
-                          text: !show ? "SHOW" : "HIDE",
-                          onTap: () async {
-                            setState(() {
-                              show = !show;
-                            });
-                            await rooms
-                                .doc(widget.id)
-                                .update({"show": show})
-                                .then((value) => print("show updated"))
-                                .catchError((error) =>
-                                    print("Failed to update show: $error"));
-                          },
-                        ),
-                        MainActionButton(
-                          text: "UPDATE!",
-                          onTap: () async {
-                            setState(() {
-                              show = false;
-                            });
-                            await rooms
-                                .doc(widget.id)
-                                .set({
-                                  'question': question,
-                                  "responses": {},
-                                  "show": false
-                                })
-                                .then((value) => print("question set"))
-                                .catchError((error) =>
-                                    print("Failed to set question: $error"));
-                          },
-                        ),
-                      ],
-                    )
-                  ],
+                  ]),
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                width: 700,
+                child: Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Watch your responses roll in",
+                        style:
+                            TextStyle(fontSize: 50, fontFamily: "Huruf Miranti"),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        "When you're done with this question, type a new one in the box. Click \"Update\" and it'll magically change on all your respondents's screens instantly\n" +
+                            (!show
+                                ? "Click show to show your participants the data."
+                                : "Click hide to hide the data from your participants."),
+                        style:
+                            TextStyle(fontSize: 25, fontFamily: "Huruf Miranti"),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 20),
+                      OpinionBar(id: widget.id),
+                      SizedBox(height: 40),
+                      TextField(
+                        onChanged: (text) {
+                          setState(() {
+                            question = text;
+                          });
+                        },
+                        textAlign: TextAlign.center,
+                        cursorColor: Colors.grey,
+                        cursorWidth: 3,
+                        cursorRadius: Radius.circular(5),
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          hintText: 'How much do you love me?',
+                          hintStyle: TextStyle(
+                            fontSize: 25,
+                            fontFamily: "Bandakala",
+                          ),
+                          focusedBorder: const OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.black, width: 1),
+                          ),
+                        ),
+                        style: TextStyle(
+                          fontSize: 25,
+                          height: 1.6,
+                          fontFamily: "Bandakala",
+                        ),
+                      ),
+                      SizedBox(height: 50),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          MainActionButton(
+                            text: !show ? "SHOW" : "HIDE",
+                            onTap: () async {
+                              setState(() {
+                                show = !show;
+                              });
+                              await rooms
+                                  .doc(widget.id)
+                                  .update({"show": show})
+                                  .then((value) => print("show updated"))
+                                  .catchError((error) =>
+                                      print("Failed to update show: $error"));
+                            },
+                          ),
+                          MainActionButton(
+                            text: "UPDATE!",
+                            onTap: () async {
+                              setState(() {
+                                show = false;
+                              });
+                              await rooms
+                                  .doc(widget.id)
+                                  .set({
+                                    'question': question,
+                                    "responses": {},
+                                    "show": false
+                                  })
+                                  .then((value) => print("question set"))
+                                  .catchError((error) =>
+                                      print("Failed to set question: $error"));
+                            },
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 70)
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -265,54 +273,57 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(30),
-          child: Column(
-            children: [
-              Text(
-                id != null ? id : "",
-                style: TextStyle(
-                  fontFamily: "Bazar",
-                  fontSize: 30,
-                  letterSpacing: 3,
+    return SizedBox(
+      width: 1220,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: Column(
+              children: [
+                Text(
+                  id != null ? id : "",
+                  style: TextStyle(
+                    fontFamily: "Bazar",
+                    fontSize: 30,
+                    letterSpacing: 3,
+                  ),
                 ),
-              ),
-              //kept in for spacing
-              Text(
-                "",
-                style: TextStyle(
-                  fontFamily: "Bazar",
-                  fontSize: 30,
+                //kept in for spacing
+                Text(
+                  "",
+                  style: TextStyle(
+                    fontFamily: "Bazar",
+                    fontSize: 30,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(30),
-          child: Column(
-            children: [
-              Text(
-                "EZRA NEWMAN",
-                style: TextStyle(
-                  fontFamily: "Bazar",
-                  fontSize: 30,
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: Column(
+              children: [
+                Text(
+                  "EZRA NEWMAN",
+                  style: TextStyle(
+                    fontFamily: "Bazar",
+                    fontSize: 30,
+                  ),
                 ),
-              ),
-              Text(
-                "PROUDLY PRESENTS",
-                style: TextStyle(
-                  fontFamily: "Bazar",
-                  fontSize: 30,
+                Text(
+                  "PROUDLY PRESENTS",
+                  style: TextStyle(
+                    fontFamily: "Bazar",
+                    fontSize: 30,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

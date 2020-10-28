@@ -48,108 +48,112 @@ class _CreateState extends State<Create> {
     return Scaffold(
       backgroundColor: Color(0xFFD9CAB3),
       body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TopBar(),
-            Padding(
-              padding: const EdgeInsets.all(32.0),
-              child: SizedBox(
-                width: 300,
-                height: 155,
-                child: Stack(children: [
-                  Text(
-                    "Create ",
-                    style: TextStyle(
-                      fontSize: 100,
-                      fontFamily: 'Bandakala',
-                      color: Color(0xffF86624),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      "Polling made easy",
-                      style: TextStyle(
-                          fontSize: 32,
-                          fontFamily: 'Bandakala',
-                          color: Color(0xff22AAA1),
-                          height: 1.6),
-                    ),
-                  ),
-                ]),
-              ),
-            ),
-            SizedBox(
-              width: 700,
-              child: Center(
-                child: Column(
-                  children: [
+        child: FittedBox(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TopBar(),
+              Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: SizedBox(
+                  width: 300,
+                  height: 155,
+                  child: Stack(children: [
                     Text(
-                      "Start by entering your first question:",
-                      style:
-                          TextStyle(fontSize: 50, fontFamily: "Huruf Miranti"),
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      "Don't worry, you can change this later.",
-                      style:
-                          TextStyle(fontSize: 25, fontFamily: "Huruf Miranti"),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 40),
-                    TextField(
-                      onChanged: (text) {
-                        setState(() {
-                          if (text == "") {
-                            text = "How much do you love me?";
-                          }
-                          question = text;
-                        });
-                      },
-                      textAlign: TextAlign.center,
-                      cursorColor: Colors.grey,
-                      cursorWidth: 3,
-                      cursorRadius: Radius.circular(5),
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        hintText: 'How much do you love me?',
-                        hintStyle: TextStyle(
-                          fontSize: 25,
-                          fontFamily: "Bandakala",
-                        ),
-                        focusedBorder: const OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(color: Colors.black, width: 1),
-                        ),
-                      ),
+                      "Create ",
                       style: TextStyle(
-                        fontSize: 25,
-                        height: 1.6,
-                        fontFamily: "Bandakala",
+                        fontSize: 100,
+                        fontFamily: 'Bandakala',
+                        color: Color(0xffF86624),
                       ),
                     ),
-                    SizedBox(height: 100),
                     Align(
                       alignment: Alignment.bottomRight,
-                      child: MainActionButton(
-                        text: "LET'S GO!",
-                        onTap: () async {
-                          String id = await createRoom();
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return Manage(id: id);
-                          }));
-                        },
+                      child: Text(
+                        "Polling made easy",
+                        style: TextStyle(
+                            fontSize: 32,
+                            fontFamily: 'Bandakala',
+                            color: Color(0xff22AAA1),
+                            height: 1.6),
                       ),
-                    )
-                  ],
+                    ),
+                  ]),
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                width: 700,
+                child: Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Start by entering your first question:",
+                        style:
+                            TextStyle(fontSize: 50, fontFamily: "Huruf Miranti"),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        "Don't worry, you can change this later.",
+                        style:
+                            TextStyle(fontSize: 25, fontFamily: "Huruf Miranti"),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 40),
+                      TextField(
+                        onChanged: (text) {
+                          setState(() {
+                            if (text == "") {
+                              text = "How much do you love me?";
+                            }
+                            question = text;
+                          });
+                        },
+                        textAlign: TextAlign.center,
+                        cursorColor: Colors.grey,
+                        cursorWidth: 3,
+                        cursorRadius: Radius.circular(5),
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          hintText: 'How much do you love me?',
+                          hintStyle: TextStyle(
+                            fontSize: 25,
+                            fontFamily: "Bandakala",
+                          ),
+                          focusedBorder: const OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.black, width: 1),
+                          ),
+                        ),
+                        style: TextStyle(
+                          fontSize: 25,
+                          height: 1.6,
+                          fontFamily: "Bandakala",
+                        ),
+                      ),
+                      SizedBox(height: 100),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: MainActionButton(
+                          text: "LET'S GO!",
+                          onTap: () async {
+                            String id = await createRoom();
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) {
+                              return Manage(id: id);
+                            }));
+                          },
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 70)
+            ],
+          ),
         ),
       ),
     );

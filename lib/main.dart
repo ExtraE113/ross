@@ -33,62 +33,67 @@ class MyHomePage extends StatelessWidget {
         body: Stack(
       children: [
         Container(color: Color(0xFFD9CAB3)),
-        Column(
-          children: [
-            TopBar(),
-            Spacer(),
-            SizedBox(
-              width: 400,
-              height: 155,
-              child: Stack(children: [
-                Text(
-                  "Ross ",
-                  style: TextStyle(
-                    fontSize: 100,
-                    height: 1.6,
-                    fontFamily: 'Bandakala',
-                    color: Color(0xffF86624),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Text(
-                    "Polling Made Easy",
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontFamily: 'Bandakala',
-                      color: Color(0xff22AAA1),
-                    ),
-                  ),
-                ),
-              ]),
-            ),
-            Spacer(flex: 3),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        Center(
+          child: FittedBox(
+            fit: BoxFit.contain,
+            child: Column(
               children: [
-                MainActionButton(
-                  text: "JOIN A SESSION",
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return Join();
-                    }));
-                  },
+                TopBar(),
+                SizedBox(height: 100),
+                SizedBox(
+                  width: 400,
+                  height: 155,
+                  child: Stack(children: [
+                    Text(
+                      "Ross ",
+                      style: TextStyle(
+                        fontSize: 100,
+                        height: 1.6,
+                        fontFamily: 'Bandakala',
+                        color: Color(0xffF86624),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        "Polling Made Easy",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontFamily: 'Bandakala',
+                          color: Color(0xff22AAA1),
+                        ),
+                      ),
+                    ),
+                  ]),
                 ),
-                MainActionButton(
-                  text: "CREATE A SESSION",
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return Create();
-                    }));
-                  },
+                SizedBox(height: 250),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    MainActionButton(
+                      text: "JOIN A SESSION",
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return Join();
+                        }));
+                      },
+                    ),
+                    MainActionButton(
+                      text: "CREATE A SESSION",
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                          return Create();
+                        }));
+                      },
+                    ),
+                  ],
                 ),
+                SizedBox(height: 100)
               ],
             ),
-            Spacer(flex: 3),
-          ],
+          ),
         ),
       ],
     ));
